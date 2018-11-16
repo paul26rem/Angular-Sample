@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div id="profPic">
+		</div>
+	</div>
+	<div class="row">
+		<h2>Username</h2>
+	</div>
+	<div class="space row"></div>
+
+	<app-sidebar-item name="Quotation" icon="fa fa-quote-left fa-lg" 
+		[subItems]="[
+			{name: 'Quotation Processing', url:'quotation/processing'},
+			{name: 'Quotation Inquiry', url: ''}
+
+		]">
+				
+	</app-sidebar-item>
+
+	<app-sidebar-item name="Underwritting" icon="fa fa-file-text-o fa-lg"></app-sidebar-item>
+
+	<app-sidebar-item name="Accounting" icon="fa fa-money fa-lg"></app-sidebar-item>
+
+	<app-sidebar-item name="Claims" icon="fa fa-suitcase fa-lg"></app-sidebar-item>
+
+	<app-sidebar-item name="Security" icon="fa fa-shield fa-lg"></app-sidebar-item>
+
+
+</div>

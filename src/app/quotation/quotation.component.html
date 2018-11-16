@@ -1,0 +1,163 @@
+<div id="navbar">
+	<div>
+			<h1>Quotation / Quotation Processing</h1>
+	</div>
+	<div>
+		<ul class="navbar-nav bd-navbar-nav flex-row">
+			<li>General Info</li>
+			<li>Coverage Details</li>
+			<li>Quote Option</li>
+			<li>Attachments</li>
+			<li>Print</li>
+			<li>Exit</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="content">
+	<div id="navBtns">
+		<button class="btn">Back</button>
+		<button class="btn">Save</button>
+		<button class="btn">Cancel</button>
+	</div>
+
+	<div id="tableContorls"class="container-fluid">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-6">
+				<button class="btn">Add</button>
+				<button class="btn">Delete</button>
+			</div>
+			<div class="col-4" id="searchDiv">
+				<label for="txtSearch">Search: </label>&nbsp;
+				<input class="form-control" type="text" name="txtSearch" id="txtSearch" [(ngModel)]="search" (input)="getData()">
+			</div>
+			<div class="col-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10">
+				<table class="table" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="10">
+					<thead>
+						<tr>
+							<th>
+								<input type="checkbox" name="selectAll" [(ngModel)]="checkAll" (click)="toggleAll()"  />
+							</th>
+							<th>
+								<mfDefaultSorter by="coverCode">Cover Code</mfDefaultSorter>
+							</th>
+							<th>
+								<mfDefaultSorter by="section">Section</mfDefaultSorter>
+							</th>
+							<th>
+								<mfDefaultSorter by="bulletNo">Bullet No.</mfDefaultSorter>
+							</th>
+							<th>
+								<mfDefaultSorter by="sumInsured">Sum Insured</mfDefaultSorter>
+							</th>
+							<th>
+								<mfDefaultSorter by="sortSe">Sort Se</mfDefaultSorter>
+							</th>	
+							<th>
+								Add SI
+							</th>
+							<th>
+								Actions
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let item of mf.data">
+							<td>
+								<input type="checkbox" [(ngModel)]="item.checked" />
+							</td>
+							<td>
+								{{item.coverCode}}
+							</td>
+							<td>
+								{{item.section}}
+							</td>
+							<td>
+								{{item.bulletNo}}
+							</td>
+							<td>
+								{{item.sumInsured}}
+							</td>
+							<td>
+								{{item.sortSe}}
+							</td>
+							<td>
+								<input type="checkbox"/>
+							</td>
+							<td>
+								<i class="fa fa-remove fa-lg"></i>
+								<i class="fa fa-remove fa-lg"></i>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="8">
+								<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+							</td>
+						</tr>	
+					</tfoot>
+				</table>
+			<div class="col-1"></div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col col-3">
+				Total Sum Insured Section II
+			</div>
+			<div class="col col-2">
+				<input class="form-control" type="text" name="" placeholder="50,000,000.00">
+			</div>
+			<div class="col col-1">
+				Section II
+			</div>
+			<div class="col col-2">
+				<input class="form-control" type="text" name="" placeholder="0.00">
+			</div>
+			<div class="col col-1">
+				Section III
+			</div>
+			<div class="col col-2">
+				<input class="form-control" type="text" name="" placeholder="0.00">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col col-3">
+				Currency
+			</div>
+			<div class="col col-2">
+				<select class="form-control">
+					<option></option>
+					<option>Peso</option>
+					<option>Dollar</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col col-3">
+				Deductibles
+			</div>
+			<div class="col col-5">
+				<textarea class="form-control">Deductible applicable to entire quote, if any</textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col col-3">
+				Remarks
+			</div>
+			<div class="col col-5">
+				<textarea class="form-control">Various Remarks</textarea>
+			</div>
+		</div>
+	</div>
+
+</div>

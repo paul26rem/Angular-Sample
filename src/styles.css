@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+  height: 100%;
+  background-color: #f3f3f3;
+}
+app-root{
+	width: 100%;
+}
+.ng-sidebar__content{
+	background-color: #f3f3f3;
+}
+
+.page-item.active .page-link{
+	background-color: #7395ae !important; 
+	border-color: #7395ae !important; 
+}

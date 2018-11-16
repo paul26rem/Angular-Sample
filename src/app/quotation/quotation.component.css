@@ -1,0 +1,85 @@
+#navbar{
+	background-color: white;
+}
+li{
+	margin-right: 3%;
+}
+#navbar div{
+	margin-left: 2%;
+}
+
+li:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+.content{
+	text-align: center;
+}
+#navBtns{
+	text-align: right;
+}
+
+.btn{
+	margin: 1%;
+	background-color: #7395ae;
+	color: white;
+	width: 100px;
+	height: 30px;
+	vertical-align: middle;
+	padding:0px;
+}
+
+#tableContorls{
+	text-align: left;
+}
+
+
+#txtSearch{
+	height: 30px;
+	width: 300px;
+	display: inline;
+	padding: 0px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#searchDiv{
+	text-align: right;
+}
+
+label{
+	margin: 0px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+table{
+	background-color: white;
+
+}
+.col-2 input,select{
+	width: 100%;
+	text-align:right;
+}
+
+
+.col-1{
+	padding-left: 5px;
+}
+
+.col{
+	text-align: right;
+	vertical-align: middle;
+}
+
+textarea{
+	height: 100%;
+	width: 100%;
+}
+
+tfoot{
+	background-color: #f3f3f3;
+}
+

@@ -1,0 +1,23 @@
+.container{
+	position: relative;
+	height: 18%;
+	color: white;
+}
+
+#profPic{
+	margin: 5%;
+	border: solid white 1px;
+	height: 7em;
+	width: 7em;
+}
+h2{
+	margin-left: 5%;
+}
+
+.space{
+	height: 30%;
+}
+
+.row{
+	margin-bottom: 6%;
+}

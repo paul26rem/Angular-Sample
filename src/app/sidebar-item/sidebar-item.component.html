@@ -1,0 +1,18 @@
+<div class="row" (click)="toggleSubs()">
+		<div class="col-1 ">
+			<i class="" [class]="icon"></i>
+		</div>
+		<div class="col-9" [innerText]="name">
+
+		</div>
+		<div class="col-1 ">
+			<i [class]="isOpen ?'fa fa-caret-down fa-lg':'fa fa-caret-left fa-lg'"></i>
+		</div>
+</div>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" *ngFor="let subItem of subItems" id="" class="row open-close-container">
+		<div class="col-2 "></div>
+		<div class="col-8">
+			<i [routerLink]="subItem.url" routerLinkActive="active">{{subItem.name}}</i>
+		</div>
+</div>

@@ -1,0 +1,7 @@
+:host /deep/ .ng-sidebar{
+	background-color: #557a95;
+	width: 15%
+}
+:host /deep/ .ng-sidebar__content{
+	width: 100%
+}

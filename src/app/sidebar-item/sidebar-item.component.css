@@ -1,0 +1,13 @@
+.row{
+	margin-bottom: 5%;
+}
+
+.col-9{
+	font-size: larger;
+}
+
+.row:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+}
