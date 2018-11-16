@@ -26,8 +26,8 @@
 		<div class="row">
 			<div class="col-1"></div>
 			<div class="col-6">
-				<button class="btn">Add</button>
-				<button class="btn">Delete</button>
+				<button class="btn" data-toggle="modal" data-target="#myModal">Add</button>
+				<button class="btn" (click)="delete()">Delete</button>
 			</div>
 			<div class="col-4" id="searchDiv">
 				<label for="txtSearch">Search: </label>&nbsp;
@@ -160,4 +160,24 @@
 		</div>
 	</div>
 
+</div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <label for="coverCode">Cover Code: </label>&nbsp; <input class="form-control" type="text" name="coverCode" [(ngModel)]="coverCode"><br>
+        <label for="section">Section: </label>&nbsp; <input class="form-control" type="text" name="section" [(ngModel)]="section"><br>
+        <label for="bulletNo">Bullet No: </label>&nbsp; <input class="form-control" type="text" name="bulletNo" [(ngModel)]="bulletNo"><br>
+        <label for="sumInsured">Sum Insured: </label>&nbsp; <input class="form-control" type="text" name="sumInsured" [(ngModel)]="sumInsured"><br>
+        <label for="sortSe">Sort Se: </label>&nbsp; <input class="form-control" type="text" name="sortSe" [(ngModel)]="sortSe"><br>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addData()">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="reset()">Cancel</button>
+      </div>
+    </div>
+
+  </div>
 </div>

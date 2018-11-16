@@ -16,6 +16,41 @@ constructor() { }
   data:any[];
   checkAll:boolean=false;
 
+  coverCode="";
+  section="";
+  bulletNo="";
+  sumInsured="";
+  sortSe="";
+
+  addData(){
+    this.data.push(
+      {
+        checked:false,
+        coverCode:this.coverCode,
+        section: this.section,
+        bulletNo:this.bulletNo,
+        sumInsured: this.bulletNo,
+        sortSe:this.sortSe
+      }  
+    );
+    this.reset();
+  }
+
+  reset(){
+    this.coverCode="";
+    this.section="";
+    this.bulletNo="";
+    this.sumInsured="";
+    this.sortSe="";
+  }
+
+  delete(){
+    for (var i = this.data.length - 1; i >= 0; i--){
+      if(this.data[i].checked){
+        this.data.splice(i,1);
+      }
+    }
+  }
 /*replace with webservice*/
   getData(){
     this.data= [
